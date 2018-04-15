@@ -11,7 +11,7 @@
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node ./bin/www",
-      "start-dev": "nodemon -L --stack_size=1200 server.js"
+      "start-dev": "nodemon -L --stack_size=1200 ./bin/www"
    },
    "dependencies": {
       "cookie-parser": "~1.4.3",
@@ -46,7 +46,8 @@
       "eslint": "^4.19.1",
       "eslint-config-airbnb-base": "^12.1.0",
       "eslint-plugin-import": "^2.10.0",
-      "supertest": "^3.0.0"
+      "supertest": "^3.0.0",
+      "nodemon": "1.17.3"
    },
    "engines": {
       "node": ">=8.11.1",
