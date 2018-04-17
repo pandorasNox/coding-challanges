@@ -9,9 +9,10 @@
    "author": "Tino 'Nox' Stöckel",
    "license": "MIT",
    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
+      "test": "jest --forceExit",
       "start": "node ./bin/www",
-      "start-dev": "nodemon -L --stack_size=1200 ./bin/www"
+      "start-dev": "nodemon -L --stack_size=1200 ./bin/www",
+      "jest": "jest --forceExit"
    },
    "dependencies": {
       "cookie-parser": "~1.4.3",
