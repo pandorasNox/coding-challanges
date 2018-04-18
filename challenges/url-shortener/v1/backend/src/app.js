@@ -10,6 +10,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//add db connection
+const mongoDBUri = process.env.MONGO_URL;
+const mongoose = require('mongoose');
+mongoose.connect(mongoDBUri);
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 // view engine setup
 // ... not in use here ...
 
@@ -22,6 +30,7 @@ app.use(cookieParser());
 //app middleware ROUTING setup
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/v1', require('./routes/v1'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
