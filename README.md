@@ -1,2 +1,2 @@
 # coding-challanges
-repo to collect diff coding challanges I did
+repo to collect diff coding challenges I did
